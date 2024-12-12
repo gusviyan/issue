@@ -1,0 +1,279 @@
+/* General Body Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1.text-center {
+    font-family: 'Arial', sans-serif; /* Ganti dengan font khusus jika diinginkan */
+    font-size: 3rem; /* Ukuran font lebih besar */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Warna gradasi */
+    -webkit-background-clip: text; /* Membuat gradasi hanya pada teks */
+    -webkit-text-fill-color: transparent; /* Transparan untuk menerapkan gradasi */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan halus untuk kedalaman */
+    margin-bottom: 30px; /* Jarak bawah yang lebih besar */
+    text-transform: uppercase; /* Huruf kapital semua */
+}
+
+  
+  /* Body background and text */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/help.png') no-repeat  top fixed;
+    background-size: cover;
+    padding: 30px;
+    color: #fff; /* Ensures text is readable on the dark background */
+  }
+  
+  /* Main content section will take up available space */
+  .main-content {
+    flex-grow: 1; /* Allows main content to take available space */
+    padding-bottom: 30px; /* Adds space before footer */
+  }
+  
+  /* Center the form container */
+  .form-horizontal {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Form Heading */
+  legend {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Label Styles */
+  label {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Input Styles */
+  input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Textarea Styles */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Button Styles */
+  /* Menata tombol agar lebih menarik */
+button, input[type="submit"] {
+    background-color: #2298ad;  /* Warna latar belakang tombol */
+    color: white;               /* Warna teks */
+    padding: 14px 35px;         /* Padding lebih besar untuk tombol */
+    border: none;               /* Menghilangkan border */
+    border-radius: 8px;         /* Sudut lebih melengkung */
+    font-size: 1.1em;           /* Ukuran font sedikit lebih besar */
+    cursor: pointer;           /* Menunjukkan cursor pointer saat hover */
+    transition: all 0.3s ease;  /* Efek transisi halus */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/* Efek hover untuk tombol */
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;  /* Ubah warna latar belakang saat hover */
+    transform: translateY(-3px); /* Efek mengangkat tombol */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Efek saat tombol ditekan (active state) */
+button:active, input[type="submit"]:active {
+    transform: translateY(2px);  /* Menekan tombol sedikit saat diklik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan saat ditekan */
+}
+
+  
+  /* Form Group Row */
+  .form-group.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group.row .col-md-4 {
+    text-align: right;
+    padding-right: 15px;
+  }
+  
+  .form-group.row .col-md-8 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Select Dropdowns */
+  select.form-control {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  select.form-control option {
+    padding: 10px;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .form-horizontal {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    label {
+      font-size: 1em;
+    }
+  
+    .form-group.row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .form-group.row .col-md-4 {
+      text-align: left;
+      padding-right: 0;
+    }
+  
+    .form-group.row .col-md-8 {
+      padding-left: 0;
+    }
+  }
+  
+  /* Styling for Disabled or Selected Option in Select */
+  select[disabled] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Error Handling - Optional */
+  .invalid-feedback {
+    display: block;
+    font-size: 0.9em;
+    color: #dc3545;
+  }
+  
+  /* Footer Styles */
+/* Footer Styles */
+/* Footer Styles */
+/* Footer styles */
+/* Footer styles */
+.footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 20px 0;
+    width: 100%;  /* Ensure full width of the viewport */
+    max-width: 800px;  /* Match the form's max-width */
+    margin: 20px auto 0 auto; /* Centers the footer and adds margin above it */
+    text-align: center;
+    position: relative;
+    font-size: 1.2rem; /* Default size for footer text */
+}
+
+/* Footer links */
+.footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    outline: none; /* Remove default outline */
+    padding: 2px; /* Add padding for better hover effect */
+    transition: color 0.3s ease, outline 0.3s ease; /* Smooth transition */
+    font-size: 1.4rem; /* Slightly larger font for links */
+    font-style: bold;
+}
+
+/* Footer link hover effect */
+.footer a:hover {
+    text-decoration: underline;
+    color: #000000; /* Change to a bright hover color, e.g., gold */
+    outline: 2px solid #000000; /* Add a gold outline */
+    outline-offset: 4px; /* Space between text and outline */
+}
+
+/* Footer paragraph */
+.footer p {
+    margin: 0;
+    font-size: 1.2rem; /* Default size for paragraphs in footer */
+}
+
+
+
+  .footer2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 20px 0;
+    width: 100%;  /* Ensure full width of the viewport */
+    max-width: 800px;  /* Match the form's max-width */
+    margin: 20px auto 0 auto; /* Centers the footer and adds margin above it */
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Footer links and text */
+  .footer2 a {
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer2 p {
+    margin: 0;
+  }
+  
+/* Mengatur logo agar lebih besar dan responsif */
+.logo-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 300px;  /* Menyesuaikan ukuran logo menjadi lebih besar */
+    height: auto;   /* Menjaga aspek rasio logo */
+    border-radius: 8px; /* Efek sudut melengkung pada logo */
+    transform: translateX(150px);  /* Bergeser ke kanan sebesar 20px */
+}
+
+
+/* Menjadikan label menjadi bold dan memperbesar ukuran font */
+label {
+    font-weight: bold;
+    font-size: 24px; /* Ukuran font label lebih besar */
+}
+
+
+  
