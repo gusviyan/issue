@@ -41,6 +41,7 @@ $reports = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <th scope="col">Detail Masalah</th>
           <th scope="col">Unit Pelapor</th>
           <th scope="col">Priority</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -48,18 +49,19 @@ $reports = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // Menampilkan data laporan
         if ($reports) {
           foreach ($reports as $report) {
-            echo "<tr>
-                    <td>{$report['id']}</td>
-                    <td>{$report['created_at']}</td>
-                    <td>{$report['kategori']}</td>
-                    <td>{$report['detail']}</td>
-                    <td>{$report['unit']}</td>
-                    <td>{$report['priority']}</td>
-                  </tr>";
+              echo "<tr>
+                      <td>{$report['id']}</td>
+                      <td>{$report['created_at']}</td>
+                      <td>{$report['kategori']}</td>
+                      <td>" . nl2br(htmlspecialchars($report['detail'])) . "</td>
+                      <td>{$report['unit']}</td>
+                      <td>{$report['priority']}</td>
+                    </tr>";
           }
-        } else {
-          echo "<tr><td colspan='5' class='text-center'>Tidak ada laporan yang ditemukan</td></tr>";
-        }
+      } else {
+          echo "<tr><td colspan='6' class='text-center'>Tidak ada laporan yang ditemukan</td></tr>";
+      }
+      
         ?>
       </tbody>
     </table>
