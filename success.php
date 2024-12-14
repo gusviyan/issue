@@ -63,7 +63,7 @@
     <img src="images/success.png" alt="Success Icon">
     <h1>Laporan Berhasil Disimpan</h1>
     <p>Terima kasih! Laporan Anda telah berhasil kami terima dan segera ditindak lanjuti.</p>
-    <a href="index.html">Kembali ke Halaman Utama</a>
+    <a href="index.php">Kembali ke Halaman Utama</a>
   </div>
 </body>
 

@@ -110,7 +110,7 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="container text-center">
-    <p><a href="#">Klik disni untuk melihat progress laporan sebelumnya</a></p>
+    <p><a href="https://docs.google.com/spreadsheets/d/1Vn_CaKmZ1C_wObIxqp2Wv7RkglEsKfhITCL0Gjdpszc/edit?gid=1055119948#gid=1055119948">Klik disni untuk melihat progress laporan sebelumnya</a></p>
   </div>
 </footer>
 
